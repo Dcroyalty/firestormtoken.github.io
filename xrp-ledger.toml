@@ -1,0 +1,9 @@
+[METADATA]
+modified = "2026-03-21T18:00:00Z"
+
+[[CURRENCIES]]
+code = "FIRESTORM"
+issuer = "rL4ApT8Nz5Tb39M3ZLeVSHCtm4QC255K1s"
+name = "Firestorm"
+desc = "Firestorm token on the XRPL — burn bright or get consumed."
+icon = "https://firestormtoken.github.io/IMG_4555.jpeg"
