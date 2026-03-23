@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestorm Incinerator • Industrial Digital Destruction</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;600&display=swap');
+        body {
+            background: linear-gradient(135deg, #0f1c3a, #1a0f00, #0f1c3a);
+            color: #e6d5b8;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .hero {
+            background: linear-gradient(rgba(15,28,58,0.85), rgba(26,15,0,0.92)), url('firestorm-tornado.jpg') center/cover no-repeat;
+            padding: 140px 20px 100px;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 { 
+            font-family: 'Space Grotesk', sans-serif; 
+            font-size: 3.4em; 
+            text-shadow: 0 0 30px #ff6b00; 
+            margin: 0;
+        }
+        .hero p { font-size: 1.4em; margin: 15px 0 30px; }
+        .section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+        .card { background: rgba(255,255,255,0.06); border: 2px solid #00b36b; border-radius: 16px; padding: 40px; margin: 30px 0; }
+        button {
+            background: linear-gradient(#ff6b00, #cc4400);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.25em;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 15px;
+            width: 90%;
+            max-width: 420px;
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+        }
+        button:hover { transform: scale(1.05); background: linear-gradient(#ff8c33, #ff6b00); }
+        .flame { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, #ff6b00, transparent); opacity: 0; animation: sweep 1.8s forwards; z-index: 999; pointer-events: none; }
+        @keyframes sweep { 0% { opacity: 0; transform: translateX(-120%); } 50% { opacity: 0.65; } 100% { opacity: 0; transform: translateX(300%); } }
+    </style>
+</head>
+<body>
+
+    <!-- HERO – Your Tornado Logo + FST Branding -->
+    <div class="hero">
+        <h1>FIRESTORM (FST)</h1>
+        <p style="font-size:1.35em;">Industrial Digital Incinerator • Permanent Destruction on XRPL</p>
+        <button onclick="startBurn()">Burn Now – Start the Fire</button>
+    </div>
+
+    <!-- SCIENCE – Credibility -->
+    <div class="section" style="background:#0f1c3a;">
+        <h2 style="text-align:center;">Built Like Enterprise Giants</h2>
+        <p style="text-align:center;">Just like Google Cloud or global waste-management leaders, Firestorm uses immutable XRPL ledger for permanent, verifiable deletion. Orange = excitement. Green = trust. Every burn creates real FST demand.</p>
+    </div>
+
+    <!-- INDIVIDUAL – Joyful & Easy -->
+    <div class="section card">
+        <h2>Personal / Small Business Burn</h2>
+        <p>Send any token or XRP to the dead address. Small FST fee covers round-up + proof. Feel the joy of total control.</p>
+        <button onclick="startBurn()">Burn Tokens Now</button>
+        <button onclick="goToSwap()">Swap XRP → FIRESTORM (Instant)</button>
+    </div>
+
+    <!-- ENTERPRISE – Recurring Revenue (your big figure) -->
+    <div class="section card">
+        <h2>Enterprise Monthly Subscriptions</h2>
+        <p>Unlimited or bulk secure deletions with compliance receipts — perfect for teams and corporations.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+            <div style="background:rgba(0,179,107,0.1); padding:25px; border-radius:12px; width:280px;">
+                <h3>Starter – $29/mo</h3>
+                <p>Up to 500k tokens/month<br>Basic receipt</p>
+            </div>
+            <div style="background:rgba(0,179,107,0.1); padding:25px; border-radius:12px; width:280px;">
+                <h3>Pro – $99/mo</h3>
+                <p>Unlimited burns<br>Full compliance + audit trail</p>
+            </div>
+            <div style="background:rgba(0,179,107,0.1); padding:25px; border-radius:12px; width:280px;">
+                <h3>Enterprise – Custom</h3>
+                <p>Huge dumps • API • Dedicated support</p>
+                <button onclick="enterpriseContact()">Get Custom Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRUST -->
+    <div class="section" style="text-align:center; background:#0f1c3a;">
+        <p>All burns are permanent and publicly verifiable on XRPL.<br>Fees support the liquidity pool.<br><strong>Issuer:</strong> rL4ApT8Nz5Tb39M3ZLeVSHCtm4QC255K1s</p>
+    </div>
+
+    <script>
+        function startBurn() {
+            alert("🔥 Xaman will open.\n1. Choose any token + amount\n2. Send to dead address: rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr\n3. Small FST fee = proof\nBurn is permanent & on-chain.");
+            showFlame();
+        }
+        function goToSwap() {
+            window.open("https://dexscreener.com/xrpl/4649524553544f524d0000000000000000000000.rl4apt8nz5tb39m3zlevshctm4qc255k1s_xrp", "_blank");
+        }
+        function enterpriseContact() {
+            alert("Enterprise plan ready — unlimited burns + compliance.\nMessage us on DexScreener for custom quote.");
+            showFlame();
+        }
+        function showFlame() {
+            const flame = document.createElement('div');
+            flame.className = 'flame';
+            document.body.appendChild(flame);
+            setTimeout(() => flame.remove(), 2000);
+        }
+    </script>
+</body>
+</html>
