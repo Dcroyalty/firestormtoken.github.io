@@ -19,7 +19,7 @@
 <body>
     <h1 class="flame">🔥 Firestorm Incinerator</h1>
     <p class="subtitle">Industrial Digital Destruction on XRPL</p>
-    <p>Pay 0.5 XRP fee + burn at least 1,000 FST (or any token) forever • Get on-chain proof</p>
+    <p>Pay 0.5 XRP fee → then burn any amount of any token forever • Get on-chain proof</p>
     
     <button onclick="burnTokens()">Burn Now – Start the Fire</button>
     <button onclick="swapToFST()">Swap XRP → FST (Instant)</button>
@@ -36,7 +36,7 @@
         const yourHotWallet = "rKM3a1zj7w3i9BiEpsvXEqjozYdqjt8SdY";
 
         function burnTokens() {
-            const deepLink = `xaman://pay?to=${yourHotWallet}&currency=XRP&amount=0.5`;
+            const deepLink = `xaman://pay?to=${yourHotWallet}&currency=XRP&amount=0.5&dt=12345&memo=Firestorm%20Burn%20Fee%20%2B%20Token%20Destruction`;
             window.location.href = deepLink;
             
             setTimeout(() => {
@@ -49,7 +49,6 @@
         }
 
         function swapToFST() {
-            // Direct link to Anodos XRP/FST pool (this should open the swap screen)
             window.open('https://anodos.finance/pools?pair=XRP-FIRESTORM', '_blank');
         }
 
