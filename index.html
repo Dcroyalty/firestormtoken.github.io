@@ -24,7 +24,6 @@
     <button onclick="burnTokens()">Burn Now – Start the Fire</button>
     <button onclick="swapToFST()">Swap XRP → FST (Instant)</button>
     
-    <!-- Enterprise Monthly Payments -->
     <h2 style="margin-top:40px; color:#ffaa00;">Enterprise Plans (Monthly)</h2>
     <button onclick="enterprisePlan('starter')">Starter Monthly – Pay 10 XRP</button>
     <button onclick="enterprisePlan('pro')">Pro Monthly – Pay 20 XRP</button>
@@ -37,14 +36,9 @@
         const yourHotWallet = "rKM3a1zj7w3i9BiEpsvXEqjozYdqjt8SdY";
 
         function burnTokens() {
-            // 0.5 XRP fee to your wallet + minimum 1,000 FST burn to dead address
-            const deadAddress = "rrrrrrrrrrrrrrrrrrrrrhoLvTp";
-            const fstIssuer = "rL4ApT8Nz5Tb39M3ZLeVSHCtm4QC255K1s";
-            // Xaman deep link for multi-currency send (0.5 XRP + 1000 FST)
-            const deepLink = `xaman://pay?to=${yourHotWallet}&currency=XRP&amount=0.5&dt=12345`;
+            const deepLink = `xaman://pay?to=${yourHotWallet}&currency=XRP&amount=0.5`;
             window.location.href = deepLink;
             
-            // Flame success animation
             setTimeout(() => {
                 const flame = document.createElement('div');
                 flame.className = 'success-flame';
@@ -55,7 +49,8 @@
         }
 
         function swapToFST() {
-            window.open('https://anodos.finance/', '_blank');
+            // Direct link to Anodos XRP/FST pool (this should open the swap screen)
+            window.open('https://anodos.finance/pools?pair=XRP-FIRESTORM', '_blank');
         }
 
         function enterprisePlan(plan) {
